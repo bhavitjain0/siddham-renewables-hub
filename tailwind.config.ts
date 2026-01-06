@@ -51,18 +51,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          dark: "hsl(var(--navy-dark))",
-          light: "hsl(var(--navy-light))",
+        // Custom Siddham Green Palette
+        "deep-green": {
+          DEFAULT: "hsl(var(--deep-green))",
+          dark: "hsl(var(--deep-green-dark))",
         },
-        green: {
-          DEFAULT: "hsl(var(--green))",
-          dark: "hsl(var(--green-dark))",
-          light: "hsl(var(--green-light))",
-        },
-        cream: "hsl(var(--cream))",
-        slate: "hsl(var(--slate))",
+        "forest-green": "hsl(var(--forest-green))",
+        "mint-green": "hsl(var(--mint-green))",
+        "mint-light": "hsl(var(--mint-light))",
+        "soft-grey": "hsl(var(--soft-grey))",
+        "text-grey": "hsl(var(--text-grey))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -89,19 +87,24 @@ export default {
           to: { height: "0" },
         },
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "0%": { opacity: "0", transform: "translateY(15px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "fade-in": {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "slide-up": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.6s ease-out forwards",
-        "fade-in": "fade-in 0.5s ease-out forwards",
+        "fade-up": "fade-up 0.7s ease-out forwards",
+        "fade-in": "fade-in 0.6s ease-out forwards",
+        "slide-up": "slide-up 0.7s ease-out forwards",
       },
     },
   },

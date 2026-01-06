@@ -1,23 +1,15 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import WhySiddham from "@/components/WhySiddham";
-import Services from "@/components/Services";
-import Leadership from "@/components/Leadership";
-import Contact from "@/components/Contact";
+import HomeIntro from "@/components/HomeIntro";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main>
+      <main className="flex-grow">
         <Hero />
-        <About />
-        <WhySiddham />
-        <Services />
-        <Leadership />
-        <Contact />
+        <HomeIntro />
       </main>
       <Footer />
     </div>

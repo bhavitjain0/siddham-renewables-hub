@@ -6,50 +6,49 @@
 
 @layer base {
   :root {
-    /* Corporate Navy Blue & Green Palette */
+    /* Deep Green Sustainability-Focused Palette */
     --background: 0 0% 100%;
-    --foreground: 215 28% 17%;
+    --foreground: 150 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    --card-foreground: 150 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
+    --popover-foreground: 150 10% 15%;
 
-    /* Primary: Navy Blue from logo */
-    --primary: 213 52% 24%;
+    /* Primary: Deep Forest Green */
+    --primary: 152 45% 22%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Light blue-gray */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 213 52% 24%;
+    /* Secondary: Light Mint */
+    --secondary: 145 30% 95%;
+    --secondary-foreground: 152 45% 22%;
 
-    /* Muted */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted: Soft Grey */
+    --muted: 150 10% 96%;
+    --muted-foreground: 150 10% 45%;
 
-    /* Accent: Green from logo */
-    --accent: 147 52% 46%;
+    /* Accent: Vibrant Green */
+    --accent: 147 50% 38%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 213 52% 24%;
+    --border: 150 15% 90%;
+    --input: 150 15% 90%;
+    --ring: 152 45% 22%;
 
     --radius: 0.5rem;
 
-    /* Custom tokens for Siddham */
-    --navy: 213 52% 24%;
-    --navy-dark: 213 60% 18%;
-    --navy-light: 213 45% 35%;
-    --green: 147 52% 46%;
-    --green-dark: 147 55% 38%;
-    --green-light: 147 45% 55%;
-    --cream: 40 40% 97%;
-    --slate: 215 20% 65%;
+    /* Custom tokens for Siddham - Green Palette */
+    --deep-green: 152 45% 22%;
+    --deep-green-dark: 152 50% 16%;
+    --forest-green: 147 40% 30%;
+    --mint-green: 145 35% 90%;
+    --mint-light: 145 40% 96%;
+    --soft-grey: 150 10% 96%;
+    --text-grey: 150 10% 45%;
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
@@ -63,33 +62,33 @@
   }
 
   .dark {
-    --background: 213 60% 8%;
-    --foreground: 210 40% 98%;
+    --background: 152 40% 6%;
+    --foreground: 145 30% 95%;
 
-    --card: 213 55% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 152 35% 10%;
+    --card-foreground: 145 30% 95%;
 
-    --popover: 213 55% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 152 35% 10%;
+    --popover-foreground: 145 30% 95%;
 
-    --primary: 147 52% 46%;
+    --primary: 147 50% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 213 45% 20%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 152 35% 15%;
+    --secondary-foreground: 145 30% 95%;
 
-    --muted: 213 45% 20%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 152 35% 15%;
+    --muted-foreground: 150 15% 65%;
 
-    --accent: 147 52% 46%;
+    --accent: 147 50% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 145 30% 95%;
 
-    --border: 213 45% 20%;
-    --input: 213 45% 20%;
-    --ring: 147 52% 46%;
+    --border: 152 35% 18%;
+    --input: 152 35% 18%;
+    --ring: 147 50% 45%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -126,14 +125,19 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* Subtle animations - no bounce, no counters */
+  /* Subtle animations - calm and professional */
   .animate-fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
+    animation: fadeUp 0.7s ease-out forwards;
     opacity: 0;
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.7s ease-out forwards;
     opacity: 0;
   }
 
@@ -153,29 +157,38 @@
     animation-delay: 400ms;
   }
 
-  /* Hero overlay gradient */
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* Hero overlay gradient - deep green */
   .hero-overlay {
     background: linear-gradient(
       to right,
-      hsl(var(--navy) / 0.92) 0%,
-      hsl(var(--navy) / 0.75) 50%,
-      hsl(var(--navy) / 0.4) 100%
+      hsl(var(--deep-green) / 0.92) 0%,
+      hsl(var(--deep-green) / 0.80) 40%,
+      hsl(var(--deep-green) / 0.50) 100%
     );
   }
 
   /* Section styling */
-  .section-cream {
-    background-color: hsl(var(--cream));
+  .section-mint {
+    background-color: hsl(var(--mint-light));
   }
 
-  /* Card hover effect - subtle border change */
+  .section-soft {
+    background-color: hsl(var(--soft-grey));
+  }
+
+  /* Card hover effect - subtle green border transition */
   .card-hover {
-    @apply transition-all duration-300;
+    @apply transition-all duration-300 ease-in-out;
   }
 
   .card-hover:hover {
-    border-color: hsl(var(--green));
-    box-shadow: 0 4px 20px hsl(var(--navy) / 0.08);
+    border-color: hsl(var(--accent));
+    box-shadow: 0 4px 24px hsl(var(--deep-green) / 0.08);
+    transform: translateY(-2px);
   }
 
   /* Green accent underline */
@@ -185,14 +198,45 @@
 
   .accent-underline::after {
     content: '';
-    @apply absolute left-0 bottom-0 w-16 h-1 bg-accent;
+    @apply absolute left-0 bottom-0 w-16 h-1;
+    background-color: hsl(var(--accent));
+  }
+
+  /* Green gradient backgrounds */
+  .gradient-green {
+    background: linear-gradient(135deg, hsl(var(--deep-green)) 0%, hsl(var(--forest-green)) 100%);
+  }
+
+  /* Button hover scale */
+  .btn-hover-scale {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  .btn-hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Sticky header shadow on scroll */
+  .header-shadow {
+    box-shadow: 0 2px 20px hsl(var(--deep-green) / 0.08);
+  }
+
+  /* Green divider */
+  .divider-green {
+    @apply w-16 h-1 mx-auto;
+    background-color: hsl(var(--accent));
+  }
+
+  /* Thin green border accent */
+  .border-accent-thin {
+    border-left: 3px solid hsl(var(--accent));
   }
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
@@ -206,5 +250,16 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

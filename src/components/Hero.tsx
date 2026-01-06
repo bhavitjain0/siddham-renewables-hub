@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -18,53 +19,67 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-foreground leading-tight mb-6"
-          >
-            Enabling Large-Scale Renewable Energy Projects
-          </motion.h1>
-
+          {/* Company Name */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl md:text-2xl text-primary-foreground/90 font-light mb-4"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-accent font-semibold tracking-wide mb-4 text-sm uppercase"
           >
-            Creating a Sustainable Tomorrow Through Clean Energy Infrastructure
+            Siddham Renewables Private Limited
           </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
+          <motion.h1
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-primary-foreground leading-tight mb-6"
+          >
+            Renewable Energy Land Development & Aggregation Experts in India
+          </motion.h1>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="text-xl md:text-2xl text-primary-foreground/90 font-light mb-4"
+          >
+            Enabling Solar, Wind & Hybrid Energy Projects Across Rajasthan
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
             className="text-lg text-primary-foreground/75 mb-8 max-w-2xl"
           >
-            Trusted partner for developers, EPCs & investors in Rajasthan for solar, wind & hybrid project enablement
+            Redefining the execution and O&M of renewable energy projects
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.7, delay: 0.65 }}
             className="flex flex-wrap gap-4"
           >
-            <Button 
-              size="lg" 
-              className="bg-accent hover:bg-green-dark text-accent-foreground text-base px-8"
-            >
-              Our Services
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8"
-            >
-              Learn More
-            </Button>
+            <Link to="/services">
+              <Button 
+                size="lg" 
+                className="bg-accent hover:bg-forest-green text-accent-foreground text-base px-8 btn-hover-scale"
+              >
+                Our Services
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+            <Link to="/projects">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8"
+              >
+                Projects
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>
