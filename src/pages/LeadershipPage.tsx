@@ -109,7 +109,7 @@ const LeadershipPage = () => {
                     transition={{ duration: 0.6, delay: 0.15 * index }}
                     className="bg-card border border-border rounded-lg overflow-hidden card-hover"
                   >
-                    <div className="aspect-[4/3] bg-mint-light flex items-center justify-center overflow-hidden">
+                    <div className="aspect-square bg-mint-light flex items-center justify-center overflow-hidden">
                       <img 
                         src={leader.image} 
                         alt={leader.name}
