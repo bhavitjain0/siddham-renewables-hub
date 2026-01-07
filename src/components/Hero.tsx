@@ -75,7 +75,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8"
+                className="border-accent bg-white/90 text-accent hover:bg-white hover:text-forest-green text-base px-8 font-semibold"
               >
                 Projects
               </Button>
