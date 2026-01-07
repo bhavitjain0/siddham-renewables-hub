@@ -20,10 +20,10 @@ const Header = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
+    { href: "/leadership", label: "Leadership" },
     { href: "/why-siddham", label: "Why Siddham" },
     { href: "/services", label: "Services" },
     { href: "/development", label: "Capabilities" },
-    { href: "/leadership", label: "Leadership" },
     { href: "/projects", label: "Projects" },
     { href: "/contact", label: "Contact" },
   ];
