@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Building } from "lucide-react";
+import { Phone, Building, Mail, Linkedin, Instagram } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -65,7 +65,7 @@ const ContactPage = () => {
                 </div>
 
                 {/* Phone Numbers */}
-                <div className="space-y-6">
+                <div className="space-y-6 mb-10 pb-10 border-b border-border">
                   <h4 className="text-lg font-semibold text-foreground mb-4">Contact Numbers</h4>
                   
                   <motion.a
@@ -80,7 +80,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="text-foreground font-semibold text-lg">+91 98294 08299</p>
-                      <p className="text-muted-foreground text-sm">Primary Contact</p>
+                      <p className="text-muted-foreground text-sm">Gaurav Jhanjhari — Primary Contact</p>
                     </div>
                   </motion.a>
 
@@ -96,9 +96,61 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="text-foreground font-semibold text-lg">+91 98292 12633</p>
-                      <p className="text-muted-foreground text-sm">Alternate Contact</p>
+                      <p className="text-muted-foreground text-sm">CA Ankur Purohit — Alternate Contact</p>
                     </div>
                   </motion.a>
+                </div>
+
+                {/* Email */}
+                <div className="space-y-6 mb-10 pb-10 border-b border-border">
+                  <h4 className="text-lg font-semibold text-foreground mb-4">Email</h4>
+                  
+                  <motion.a
+                    href="mailto:jgaurav5@gmail.com"
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="flex items-center gap-4 p-4 rounded-lg bg-mint-light hover:bg-accent/15 transition-colors duration-200 group"
+                  >
+                    <div className="w-12 h-12 rounded-lg bg-accent/15 group-hover:bg-accent/25 flex items-center justify-center flex-shrink-0 transition-colors duration-200">
+                      <Mail className="h-6 w-6 text-accent" />
+                    </div>
+                    <div>
+                      <p className="text-foreground font-semibold text-lg">jgaurav5@gmail.com</p>
+                      <p className="text-muted-foreground text-sm">Gaurav Jhanjhari — Primary Contact</p>
+                    </div>
+                  </motion.a>
+                </div>
+
+                {/* Social Links */}
+                <div className="space-y-6">
+                  <h4 className="text-lg font-semibold text-foreground mb-4">Follow Us</h4>
+                  
+                  <div className="flex items-center gap-4">
+                    <motion.a
+                      href="https://www.linkedin.com/company/siddham-renewables/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.7 }}
+                      className="w-14 h-14 rounded-lg bg-accent/15 hover:bg-accent/25 flex items-center justify-center transition-colors duration-200"
+                    >
+                      <Linkedin className="h-7 w-7 text-accent" />
+                    </motion.a>
+                    
+                    <motion.a
+                      href="https://www.instagram.com/siddham_renewables/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                      className="w-14 h-14 rounded-lg bg-accent/15 hover:bg-accent/25 flex items-center justify-center transition-colors duration-200"
+                    >
+                      <Instagram className="h-7 w-7 text-accent" />
+                    </motion.a>
+                  </div>
                 </div>
               </motion.div>
             </div>

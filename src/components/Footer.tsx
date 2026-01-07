@@ -14,7 +14,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Siddham Renewables" 
-                className="h-14 w-auto bg-white rounded p-1"
+                className="h-20 w-auto bg-white rounded p-1"
               />
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">

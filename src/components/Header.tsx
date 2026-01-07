@@ -41,7 +41,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Siddham Renewables Private Limited" 
-              className="h-14 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
