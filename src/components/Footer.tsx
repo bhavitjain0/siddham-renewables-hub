@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Linkedin, Instagram } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
@@ -7,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="gradient-green py-16">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo & Company */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -61,6 +62,29 @@ const Footer = () => {
               <Link to="/terms" className="text-primary-foreground/70 hover:text-accent text-sm transition-colors duration-200">
                 Terms of Use
               </Link>
+            </div>
+          </div>
+
+          {/* Socials */}
+          <div>
+            <h4 className="text-primary-foreground font-semibold mb-4">Follow Us</h4>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/company/siddham-renewables/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors duration-200"
+              >
+                <Linkedin className="h-5 w-5 text-primary-foreground" />
+              </a>
+              <a
+                href="https://www.instagram.com/siddham_renewables/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors duration-200"
+              >
+                <Instagram className="h-5 w-5 text-primary-foreground" />
+              </a>
             </div>
           </div>
         </div>
